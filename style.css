@@ -18,27 +18,61 @@ body{
     background-color: hsl(216, 50%, 16%);
     padding: 1.5em;
 }
-.image img{
-    height: 100%;
-    width: 100%;
-    border-radius: 0.5em;
+.visible:hover{
+    opacity: 0.5;
 }
-.image:hover{
-    backface-visibility: hidden;
+.image:hover .bckimg{    
+    opacity: 10;
+}
+.image:hover .bluebck{    
+    opacity: 0.6;
+    
 }
 
+.visible{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.9em;
+    cursor: pointer;
+    opacity: 10;
+    transition: all 0.4s ease;
+}
+
+.bluebck{
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 0.9em;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 4.5em;
+    transition: all 0.4s ease;
+}
+
+.bckimg{ 
+    position: absolute;
+    top: 13em;
+    right: 35.5em;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
 .maintxt{
     font-size: 23px;
     font-weight: 600;
 }
 .maintxt a{
     text-decoration: none;
-    color: hsl(215, 68%, 59%);
+    color: white;
+}
+.maintxt a:hover{
+    color: hsl(178, 100%, 50%);
 }
 .container p{
-    font-size: 1em;
+    font-size: 18px;
     font-weight: 300;
-    color: hsl(215, 51%, 70%);
+    color: hsl(215, 15%, 61%);
 }
 .price{
     color: hsl(178, 100%, 50%);
@@ -58,7 +92,7 @@ body{
 }
 .content{
     border-bottom: 0.15em solid hsl(215, 32%, 27%);
-    margin-bottom: 2em;
+    margin-bottom: 0.9em;
     padding-bottom: 1.5em;
 }
 .timer{
@@ -71,21 +105,25 @@ body{
     display: flex;
 }
 .footer img{
-    height: 2em;
     width: 2em;
     border-radius: 10em;
-    border-color: white;
+    border: 0.1em solid white;
     
 }
 .footer h3{    
     padding-left: 1em;
     margin: 0%;
-    font-weight: 300;
     padding-top: 0.3em;
+    font-size: 18px;
+    font-weight: 300;
+    color: hsl(215, 15%, 61%);
 }
 .footer a{
     text-decoration: none;
     color: white;
     font-weight: 400;
+}
+.name:hover{
+    color: hsl(178, 100%, 50%);
 }
 
